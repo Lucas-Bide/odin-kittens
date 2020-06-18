@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Kitten.delete_all
+
+names = ['Karen', 'Debora', 'NegNancy']
+
+3.times do |i|
+  Kitten.create(name: names[i], age: rand(1..15), cuteness: rand(1..10), softness: rand(1..10))
+end

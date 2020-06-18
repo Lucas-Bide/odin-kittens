@@ -1,0 +1,12 @@
+<h1>Kittens Index</h1>
+<%= button_to 'New', new_kitten_path, method: :get %>
+<div>
+  <% @kittens.each do |k| %>
+    <p><%= link_to k.name, k %></p>
+    <ul>
+      <li>Age: <%= k.age %></li>
+      <li>Cuteness: <%= k.cuteness %></li>
+      <li>Softness: <%= k.softness %></li>
+    </ul>
+  <% end %>
+</div>
